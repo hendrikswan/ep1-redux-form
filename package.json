@@ -3,11 +3,23 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.2.1"
+    "babel-eslint": "^6.1.2",
+    "react-scripts": "0.2.1",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11"
   },
   "dependencies": {
+    "eslint-plugin-flowtype": "2.7.0",
+    "eslint-plugin-jsx-a11y": "2.1.0",
+    "eslint-plugin-react": "6.1.1",
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "react-redux": "4.4.5",
+    "redux": "3.5.2",
+    "redux-devtools": "3.3.1",
+    "redux-devtools-dock-monitor": "1.1.1",
+    "redux-thunk": "2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
