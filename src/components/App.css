@@ -4,6 +4,10 @@
   font-family: 'Roboto';
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 .App-header {
   background-color: #222;
@@ -17,4 +21,25 @@
   margin: 20px auto;
   background-color: #F6F6F6;
   padding: 10px;
+}
+
+
+button:hover {
+  color: yellow;
+}
+
+button:active {
+  color: yellow;
+  background-color: #444;
+}
+
+button {
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  background-color: #333;
+  border: none;
+  color: #FAFAFA;
+  font-size: 20px;
+  cursor: pointer;
 }

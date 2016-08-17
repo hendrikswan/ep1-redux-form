@@ -1,20 +1,3 @@
-.EmployeeList-addButton {
-  width: 95%;
-  padding: 10px;
-  margin: 10px auto;
-  display: block;
-  background-color: #333;
-  border: none;
-  color: #FAFAFA;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.EmployeeList-addButton:hover {
-  color: yellow;
-}
-
-.EmployeeList-addButton:active {
-  color: yellow;
-  background-color: #444;
+.EmployeeList-button {
+    width: 95%;
 }

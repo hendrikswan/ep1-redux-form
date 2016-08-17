@@ -19,7 +19,7 @@ const EmployeeList = ({ employees, onAdd }) => {
           </ul>
 
           <button
-            className="EmployeeList-addButton"
+            className="EmployeeList-button"
             onClick={onAdd}
           >
             Add
