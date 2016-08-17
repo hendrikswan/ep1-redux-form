@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import AppContainer from './containers/AppContainer';
 import DevTools from './components/DevTools';
 import './index.css';
 import configureStore from './configureStore';
@@ -13,7 +13,7 @@ console.log('store', store);
 ReactDOM.render(
   <Provider store={store}>
     <div>
-      <App />
+      <AppContainer />
       <DevTools />
     </div>
   </Provider>,

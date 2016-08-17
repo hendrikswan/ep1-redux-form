@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import EmployeeList from '../components/EmployeeList';
 import React from 'react';
-import { requestEmployees } from '../actions';
+import { requestEmployees, startEmployeeAdd } from '../actions';
 
 class EmployeeListContainer extends React.Component {
   componentWillMount() {
@@ -21,6 +21,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   requestEmployees: () => dispatch(requestEmployees()),
+  onAdd: () => dispatch(startEmployeeAdd()),
 });
 
 export default connect(

@@ -1,6 +1,7 @@
 import {
   RECEIVE_EMPLOYEES,
   REQUEST_EMPLOYEES,
+  START_EMPLOYEE_ADD,
 } from './constants';
 
 export function requestEmployees() {
@@ -19,5 +20,11 @@ export function receiveEmployees(employees) {
   return {
     type: RECEIVE_EMPLOYEES,
     employees,
+  };
+}
+
+export function startEmployeeAdd() {
+  return {
+    type: START_EMPLOYEE_ADD,
   };
 }

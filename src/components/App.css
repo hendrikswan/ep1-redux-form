@@ -11,3 +11,10 @@
   color: white;
   text-align: center;
 }
+
+.App-content {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #F6F6F6;
+  padding: 10px;
+}
