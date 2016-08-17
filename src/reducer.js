@@ -1,12 +1,20 @@
 import { combineReducers } from 'redux';
-import { RECEIVE_NAMES, REQUEST_NAMES } from './constants';
+import { RECEIVE_EMPLOYEES, REQUEST_EMPLOYEES } from './constants';
 
-function mainReducer(state = {}, action) {
+function mainReducer(state = {
+  employees: [],
+  loadingEmployees: true,
+}, action) {
     switch (action.type) {
-    case RECEIVE_NAMES:
-        return {};
-    case REQUEST_NAMES:
-        return {};
+    case RECEIVE_EMPLOYEES:
+        return Object.assign({}, state, {
+          employees: action.employees,
+          loadingEmployees: false,
+        });
+    case REQUEST_EMPLOYEES:
+        return Object.assign({}, state, {
+          loadingEmployees: true,
+        });
     default:
         return state;
     }
