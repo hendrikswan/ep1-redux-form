@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
-import './EmployeeForm.css';
+import './styles.css';
 
 class EmployeeForm extends Component {
   render() {
