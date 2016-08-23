@@ -1,6 +1,6 @@
 import React from 'react';
-import Employee from './Employee';
-import './EmployeeList.css';
+import Employee from '../Employee';
+import './styles.css';
 
 const EmployeeList = ({ employees, onAdd }) => {
   console.log(employees);
@@ -14,7 +14,9 @@ const EmployeeList = ({ employees, onAdd }) => {
 
   return (
       <div>
-          <ul>
+          <ul
+            className="EmployeeList"
+          >
               {employeeNodes}
           </ul>
 

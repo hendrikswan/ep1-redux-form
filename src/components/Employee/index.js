@@ -3,7 +3,9 @@ import './styles.css';
 
 const Employee = ({ name, surname }) => {
   return (
-    <li>
+    <li
+      className="Employee-item"
+    >
         {name} {surname}
     </li>
   );
