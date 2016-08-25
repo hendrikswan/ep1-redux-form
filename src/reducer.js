@@ -1,5 +1,10 @@
 import { combineReducers } from 'redux';
-import { RECEIVE_EMPLOYEES, REQUEST_EMPLOYEES, START_EMPLOYEE_ADD } from './constants';
+import {
+  RECEIVE_EMPLOYEES,
+  REQUEST_EMPLOYEES,
+  START_EMPLOYEE_ADD,
+  ADD_EMPLOYEE,
+} from './constants';
 import {reducer as formReducer} from 'redux-form';
 
 function mainReducer(state = {
@@ -20,6 +25,14 @@ function mainReducer(state = {
     case START_EMPLOYEE_ADD:
         return Object.assign({}, state, {
           addingEmployee: true,
+        })
+    case ADD_EMPLOYEE:
+        return Object.assign({}, state, {
+          addingEmployee: false,
+          employees: [
+            ...state.employees,
+            action.employee,
+          ]
         })
     default:
         return state;

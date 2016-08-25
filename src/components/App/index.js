@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import EmployeeListContainer from '../../containers/EmployeeListContainer';
-import EmployeeForm from '../../components/EmployeeForm';
+import EmployeeForm from '../../containers/EmployeeFormContainer';
 
 
 class App extends Component {

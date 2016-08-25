@@ -5,7 +5,9 @@ import { requestEmployees, startEmployeeAdd } from '../actions';
 
 class EmployeeListContainer extends React.Component {
   componentWillMount() {
-    this.props.requestEmployees();
+    if (!this.props.employees || !this.props.employees.length) {
+      this.props.requestEmployees();
+    }
   }
 
   render() {

@@ -3,7 +3,6 @@ import Employee from '../Employee';
 import './styles.css';
 
 const EmployeeList = ({ employees, onAdd }) => {
-  console.log(employees);
 
   const employeeNodes = employees.map(employee => (
       <Employee

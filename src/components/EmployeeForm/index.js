@@ -2,12 +2,30 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import './styles.css';
 
+
+const validate = values => {
+  const errors = {};
+  if (!values.name) {
+    errors.name = 'Please provide a name';
+  }
+
+  if (!values.surname) {
+    errors.surname = 'Please provide a surname';
+  }
+
+  return errors;
+}
+
 class EmployeeForm extends Component {
+  onSubmit = () => {
+    this.props.addEmployee();
+  }
+
   render() {
     const { fields: { name, surname }, handleSubmit } = this.props;
     return (
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmit(this.onSubmit)}
         className="EmployeeForm-form"
       >
         <div>
@@ -17,6 +35,7 @@ class EmployeeForm extends Component {
             {...name}
             className="EmployeeForm-input"
           />
+          {name.touched && name.error && <div className="EmployeeForm-error">{name.error}</div>}
         </div>
         <div>
           <input
@@ -25,6 +44,7 @@ class EmployeeForm extends Component {
             {...surname}
             className="EmployeeForm-input"
           />
+          {surname.touched && surname.error && <div className="EmployeeForm-error">{surname.error}</div>}
         </div>
         <button
           type="submit"
@@ -39,7 +59,8 @@ class EmployeeForm extends Component {
 
 EmployeeForm = reduxForm({
   form: 'employee',
-  fields: ['name', 'surname']
+  fields: ['name', 'surname'],
+  validate,
 })(EmployeeForm);
 
 export default EmployeeForm;

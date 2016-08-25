@@ -23,3 +23,8 @@
 .EmployeeForm-button {
   width: 100%;
 }
+
+.EmployeeForm-error {
+  color: red;
+  margin-bottom: 10px;
+}
