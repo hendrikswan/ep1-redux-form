@@ -6,7 +6,7 @@ import { addEmployee } from '../actions';
 class EmployeeFormContainer extends React.Component {
   render() {
     return (
-      <EmployeeForm wtf={true} {...this.props}/>
+      <EmployeeForm {...this.props}/>
     )
   }
 }
