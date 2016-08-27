@@ -13,7 +13,6 @@ class EmployeeFormContainer extends React.Component {
 
 
 const mapDispatchToProps = (dispatch) => ({
-  // todo: rather get employee from state here and keep action nice and simple...
   addEmployee: () => dispatch(addEmployee()),
 });
 
