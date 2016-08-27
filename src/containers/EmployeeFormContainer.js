@@ -13,7 +13,10 @@ class EmployeeFormContainer extends React.Component {
 
 
 const mapDispatchToProps = (dispatch) => ({
-  addEmployee: () => dispatch(addEmployee()),
+  addEmployee: (evt) => {
+    evt.preventDefault();
+    dispatch(addEmployee());
+  },
 });
 
 export default connect(

@@ -32,15 +32,13 @@ export function startEmployeeAdd() {
 
 
 export function addEmployee() {
-  return (dispatch, getState) => {
-    const form = getState().form;
-    const employee = {
-      name: form.employee.name.value,
-      surname: form.employee.surname.value,
-    };
+  return (dispatch) => {
     dispatch({
       type: ADD_EMPLOYEE,
-      employee,
+      employee: {
+        name: 'fake name',
+        surname: 'fake surname',
+      },
     });
-  };
+  }
 }
