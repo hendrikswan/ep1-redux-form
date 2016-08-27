@@ -11,7 +11,7 @@ export function requestEmployees() {
       type: REQUEST_EMPLOYEES,
     });
 
-    fetch('http://uinames.com/api/?amount=25')
+    fetch('http://uinames.com/api/?amount=5')
     .then((response) => response.json())
     .then((employees) => dispatch(receiveEmployees(employees)));
   }
