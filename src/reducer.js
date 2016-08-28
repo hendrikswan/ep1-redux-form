@@ -5,7 +5,6 @@ import {
   START_EMPLOYEE_ADD,
   ADD_EMPLOYEE,
 } from './constants';
-import {reducer as formReducer} from 'redux-form';
 
 function mainReducer(state = {
   employees: [],
@@ -42,7 +41,6 @@ function mainReducer(state = {
 
 const reducer = combineReducers({
     main: mainReducer,
-    form: formReducer,
 });
 
 export default reducer;
